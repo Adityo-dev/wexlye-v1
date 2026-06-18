@@ -1,62 +1,67 @@
-import { Handshake, Sparkles, Zap } from 'lucide-react';
-
-const principles = [
-  {
-    icon: Sparkles,
-    title: 'Craft',
-    desc: 'Every pixel and every line of code is intentional — no bloated templates, no shortcuts.',
-  },
-  {
-    icon: Zap,
-    title: 'Speed',
-    desc: 'Modern tooling means your site ships faster, without sacrificing quality.',
-  },
-  {
-    icon: Handshake,
-    title: 'Partnership',
-    desc: 'We stick around after launch — your growth is the actual metric we track.',
-  },
-];
-
 export default function AboutSection() {
   return (
-    <section className="relative bg-zinc-50 dark:bg-[#0F0F18]">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 py-24 lg:grid-cols-2 lg:py-32">
-        <div>
-          <div className="mb-4 font-mono text-xs tracking-wider text-violet-500 uppercase dark:text-violet-400">
-            our story
-          </div>
-          <h2 className="text-3xl leading-tight font-semibold tracking-tight text-zinc-900 sm:text-4xl dark:text-white">
-            Built by developers, for businesses that refuse to settle.
+    <section className="relative border-t border-[#DCDCD6] bg-[#EFEFEA] px-4 py-32 text-[#1A2420] transition-colors duration-300 sm:px-8 sm:py-48 lg:px-16 dark:border-[#141F1A] dark:bg-[#090D0B] dark:text-[#ECF1EE]">
+      {/* Structural Minimalist Grid System */}
+      <div className="mx-auto w-full max-w-6xl">
+        {/* Row 1: Massive Editorial Headline */}
+        <div className="mb-24 max-w-5xl sm:mb-36">
+          <span className="mb-6 block font-mono text-[10px] font-bold tracking-[0.3em] text-[#1B7A43] uppercase dark:text-[#52E095]">
+            STUDIO OVERVIEW
+          </span>
+          <h2 className="text-4xl leading-[1.05] font-light tracking-tighter text-[#1A2420] sm:text-6xl md:max-w-4xl lg:text-7xl dark:text-white">
+            We build web architecture that outpaces the market.
           </h2>
-          <p className="mt-6 text-base text-zinc-600 sm:text-lg dark:text-zinc-400">
-            Wexlye started with a simple frustration: businesses were stuck choosing between cheap,
-            templated websites that look identical to everyone else&#39;s, or expensive agencies
-            that take months to ship anything. We built Wexlye to close that gap — custom
-            development speed, WordPress flexibility, and a team that treats your project like our
-            own.
-          </p>
-          <p className="mt-4 text-base text-zinc-600 sm:text-lg dark:text-zinc-400">
-            Today we work with founders, local businesses, and growing teams who need a website that
-            actually does its job: convert.
-          </p>
         </div>
 
-        <div className="flex flex-col gap-6">
-          {principles.map(({ icon: Icon, title, desc }) => (
-            <div
-              key={title}
-              className="flex gap-4 rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-[#14141F]"
-            >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400">
-                <Icon className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-white">{title}</h3>
-                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{desc}</p>
-              </div>
+        {/* Row 2: Monolith Split Screen Layout */}
+        <div className="grid grid-cols-1 gap-12 border-t border-[#DCDCD6] pt-16 lg:grid-cols-12 lg:gap-16 dark:border-[#141F1A]">
+          {/* Left Block: Bold Corporate Mission Statement */}
+          <div className="lg:col-span-7">
+            <p className="max-w-2xl text-xl leading-relaxed font-normal text-[#1A2420] sm:text-2xl dark:text-white">
+              We operate at the intersection of rigorous code discipline and high-end enterprise
+              scale. We do not construct websites; we engineer immutable web assets.
+            </p>
+
+            <div className="mt-12 max-w-xl space-y-6 text-sm leading-relaxed font-light text-[#55635B] sm:text-base dark:text-[#8FA399]">
+              <p>
+                Every deployment profile is stripped of bloated abstractions, slow dependencies, and
+                standard drag-and-drop page builders. Our codebases are written in strict TypeScript
+                and deployed via hyper-optimized Next.js and custom standalone WordPress
+                architecture.
+              </p>
+              <p>
+                The results are high-converting, incredibly robust systems built uncompromised for
+                Speed, Lighthouse Metrics, and aggressive global scaling.
+              </p>
             </div>
-          ))}
+          </div>
+
+          {/* Right Block: Pure High-End Metric Display (No Boxes, Pure Typography) */}
+          <div className="flex flex-col justify-between gap-12 border-[#DCDCD6] lg:col-span-5 lg:border-l lg:pl-12 dark:border-[#141F1A]">
+            <div className="space-y-1">
+              <span className="block font-mono text-[52px] leading-none font-light tracking-tighter text-[#1B7A43] sm:text-[64px] dark:text-[#52E095]">
+                &lt;0.4s
+              </span>
+              <span className="block pt-2 font-mono text-xs font-bold tracking-widest text-[#1A2420] uppercase dark:text-white">
+                AVERAGE EDGE HYDRATION TIME
+              </span>
+              <p className="max-w-xs pt-1 text-xs font-light text-[#55635B] dark:text-[#8FA399]">
+                Optimized execution loops ensuring instant page delivery worldwide.
+              </p>
+            </div>
+
+            <div className="space-y-1 border-t border-neutral-300/40 pt-6 dark:border-neutral-900">
+              <span className="block font-mono text-[52px] leading-none font-light tracking-tighter text-[#1A2420] sm:text-[64px] dark:text-white">
+                100%
+              </span>
+              <span className="block pt-2 font-mono text-xs font-bold tracking-widest text-[#1A2420] uppercase dark:text-white">
+                CORE WEB VITALS AUDIT
+              </span>
+              <p className="max-w-xs pt-1 text-xs font-light text-[#55635B] dark:text-[#8FA399]">
+                Strict data hierarchies designed to achieve maximum performance scores.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
