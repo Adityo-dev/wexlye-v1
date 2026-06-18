@@ -1,9 +1,10 @@
 import AboutSection from './AboutSection/AboutSection';
-import { Contact } from './contact/contact';
+import ContactSection from './contact/contact';
+
 import HeroSection from './HeroSection/HeroSection';
 import Portfolio from './portfolio/portfolio';
 import Services from './services/services';
-import { Testimonials } from './testimonials/testimonials';
+import Testimonials from './testimonials/testimonials';
 
 function HomePage() {
   return (
@@ -13,7 +14,7 @@ function HomePage() {
       <Services />
       <Portfolio />
       <Testimonials />
-      <Contact />
+      <ContactSection />
     </div>
   );
 }
